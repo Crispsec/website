@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    background-color: #131316;
+    color: #ffffff;
+    font-family: 'Source Code Pro', monospace;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+}
+
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-6%);
+    transition: 1s;
+    transition-delay: 500ms;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0%);
+}
